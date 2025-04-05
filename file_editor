@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ $# == 1 ]; then
+  case $1 in
+    "r")
+      if [ -f listaplikow.txt ]; then
+        for i in `cat ./listaplikow.txt`
+        do
+          echo $i
+        done
+      else
+        echo "File does not exist yet, first create the file using w or a"
+      fi
+      ;;
+    "w")
+      `ls -1r | sort >./listaplikow.txt`
+      ;;
+    "a")
+      `ls -1r >>./listaplikow.txt`
+      ;;
+    *)
+      echo "Unknown input parameter" $1
+      ;;
+  esac
+else
+  echo "This program takes one argument (a for append, r for read or w for write)"
+fi
+
