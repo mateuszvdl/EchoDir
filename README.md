@@ -30,7 +30,7 @@ Replace `[option]` with one of the following:
 - `a` – Append mode
 - `r` – Read mode
 
-### Example
+### 💡Example
 
 ```bash
 ./script.sh w   # Overwrites the list with current directory contents
